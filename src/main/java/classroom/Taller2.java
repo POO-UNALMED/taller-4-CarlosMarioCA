@@ -5,7 +5,7 @@ public class Taller2 {
     public static void main(String[] args) {
         Persona[] estudiantes1 = new Persona[3];
         estudiantes1[0] = new Persona(188220);
-        estudiantes1[1] = new Persona();
+        estudiantes1[1] = new Persona("SAM");
         estudiantes1[2] = new Persona(71212, "Maria");
         Persona profesor1 = new Persona("Juan", 988);
         Asignatura asignatura1 = new Asignatura("Calculo");

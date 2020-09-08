@@ -8,15 +8,14 @@ public class Asignatura {
     int codigoExterno;
 
     Asignatura() {
-        this("Sin nombre");
-        this(0);
+        this("Sin nombre",0,0);
     }
 
     Asignatura(int codigoInterno) {
         this("Sin nombre", codigoInterno, 0);
     }
 
-    Asignatura(int codigoExterno) {
+    Asignatura(int codigoExterno) { //Hay que ver como se soluciona esto.
         this("Sin nombre", 0, codigoExterno);
     }
 
