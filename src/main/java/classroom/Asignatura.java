@@ -69,5 +69,4 @@ public class Asignatura {
     public int getCodigoExterno() {
         return codigoExterno;
     }
-
 }

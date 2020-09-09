@@ -29,9 +29,9 @@ public class Persona {
     }
 
     Persona(String nombre) {
-        //Hay que colocar modificador aquí para que no se repita la cedula.
+        //Hay que colocar modificador aqui para que no se repita la cedula.
         //O Eliminar porque no se debería poder ingresar una persona sin documento.
-        this.cedula = totalPersonas + 100000;
+        this.cedula = totalPersonas;
         this.nombre = nombre;
         totalPersonas++;
     }
