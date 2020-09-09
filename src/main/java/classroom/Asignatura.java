@@ -4,19 +4,23 @@ public class Asignatura {
 
     String nombre;
     String n = nombre;
-    int codigoInterno;
-    int codigoExterno;
+    private int codigoInterno;
+    private int codigoExterno;
 
     Asignatura() {
-        this("Sin nombre",0,0);
+        this("Sin nombre", 0, 0);
     }
 
-    Asignatura(int codigoInterno) {
-        this("Sin nombre", codigoInterno, 0);
-    }
-
-    Asignatura(int codigoExterno) { //Hay que ver como se soluciona esto.
-        this("Sin nombre", 0, codigoExterno);
+    Asignatura(String tipo, int codigo) {
+        this("Sin nombre", codigo, codigo);
+        if (tipo.equals("int")) {
+            this.codigoExterno = 0;
+        } else if (tipo.equals("ext")) {
+            this.codigoInterno = 0;
+        } else {
+            this.codigoInterno = 0;
+            this.codigoExterno = 0;
+        }
     }
 
     Asignatura(String nombre) {
@@ -35,23 +39,35 @@ public class Asignatura {
         this.nombre = nombre;
     }
 
-    void cambiarDatos(int codigoInterno) {
-        this.codigoInterno = codigoInterno;
-    }
-
-    void cambiarDatos(int codigoExterno) {
-        this.codigoExterno = codigoExterno;
+    void cambiarDatos(String tipo, int cod) {
+        if (tipo.equals("int")) {
+            this.setCodigoInterno(cod);
+        } else if (tipo.equals("ext")) {
+            this.setCodigoExterno(cod);
+        } else {
+            this.setCodigoInterno(cod);
+            this.setCodigoExterno(cod);
+        }
     }
 
     void cambiarDatos(String nombre) {
         this.nombre = nombre;
     }
 
-    public void setCodigoInterno(int codigoInterno) {
-        this.codigoInterno = codigoInterno;
-    }
-    
     public void setCodigoInterno(double codigoInterno) {
         this.codigoInterno = (int) codigoInterno;
     }
+
+    public int getCodigoInterno() {
+        return codigoInterno;
+    }
+
+    public void setCodigoExterno(double codigoExterno) {
+        this.codigoExterno = (int) codigoExterno;
+    }
+
+    public int getCodigoExterno() {
+        return codigoExterno;
+    }
+
 }

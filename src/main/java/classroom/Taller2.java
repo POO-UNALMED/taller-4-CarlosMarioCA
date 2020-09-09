@@ -12,7 +12,7 @@ public class Taller2 {
         Grupo grupo1 = new Grupo(estudiantes1, profesor1, asignatura1, 10023, "M J 2-4");
 
         Persona profesor2 = new Persona(99212, "Andrea");
-        Asignatura asignatura2 = new Asignatura(882);
+        Asignatura asignatura2 = new Asignatura("ext",882);
         asignatura2.setCodigoInterno(98);
         asignatura2.cambiarDatos("Estadistica");
         Grupo grupo2 = new Grupo(2, profesor2, asignatura2, 10122, "W V 8-10");
@@ -22,9 +22,9 @@ public class Taller2 {
 
         System.out.println(new Asignatura().nombre);
         System.out.println(grupo2.codigo);
-        System.out.println(asignatura2.codigoExterno);
-        asignatura1.cambiarDatos(50);
-        System.out.println(asignatura1.codigoExterno);
+        System.out.println(asignatura2. getCodigoExterno());
+        asignatura1.cambiarDatos("ext",50);
+        System.out.println(asignatura1. getCodigoExterno());
         System.out.println(estudiantes1[1].cedula);
         System.out.println(new Persona("Alejandro").cedula);
     }
